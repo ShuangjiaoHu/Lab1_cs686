@@ -9,7 +9,7 @@ from logger import logger
 # logger.log(0, 'Ending logger.')
 
 class file_logger(logger):
-    
+
     def __init__(self, log_level):
         self.__log_level__ = log_level
         my_file = Path("file_log.txt")

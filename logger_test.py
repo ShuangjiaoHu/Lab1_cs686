@@ -1,5 +1,5 @@
 from logger import logger
-
+from pathlib import Path
 
 """
 get_logger
@@ -23,7 +23,11 @@ main
 Instantiates and tests two logger types.
 """
 if __name__ == '__main__':
-
+    n = 3
+    my_file = Path("file_log.txt")
+    if my_file.is_file():
+        n = 4
+    print("please input", n, "filename below\n")
     for logger_type in ['file', 'stdout']:
         for log_level in range(4):
             logger = get_logger(logger_type, log_level)
